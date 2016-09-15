@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <Title>Anthony's Personality Test</title>
+</head>
+<style>
+    #button01 {
+        background-color: limegreen;
+    }
+    
+    #question01{
+        display: none;
+        }
+    #q1yes{
+        display: none;
+    }
+    
+    #q1no{
+        display: none;
+    }
+    #question02{
+        display: none;
+    }
+    #q2yes{
+        display: none;   
+    }
+    #q2no{
+        display: none;
+    }
+    #question03{
+        display: none;
+    }
+    #q3yes{
+        display: none;
+    }
+    #q3no{
+        display: none;
+    }
+    #question04{
+        display: none;
+    }
+    #q4yes{
+        display: none;
+    }
+    #q4no{
+        display: none;
+    }
+    #answer01{
+        display: none;
+    }
+    #anser02{
+        display: none;
+    }
+    
+</style>
+    
+<body>
+   
+    <div id="name">Hello!</div>
+    <input id="input" type="text" placeholder="Enter your name"/>
+    <button id="button01">Enter</button>
+    
+    <h2 id="intro">Welcome to Anthony's MIN 340 personality test!<br> In this test I will be asking you a series of questions from which I will gauge what kind of personality you have! Answer the questions honestly and to the best of your ability!<br>Would you like to try?<br><button id="button02">YES!</button></h2>
+    
+    <p id="question01">1. Do you enjoy meeting new people?</p>
+    <p> <button id="q1yes">Yes</button></p>
+    <p> <button id="q1no">No</button></p>
+    
+    <p id="question02">2. Do you enjoy helping people?</p>
+    <p> <button id="q2yes">Yes</button></p>
+    <p> <button id="q2no">No</button></p>
+    
+    <p id="question03">3. Do you enjoy trying new things?</p>
+    <p> <button id="q3yes">Yes</button></p>
+    <p> <button id="q3no">No</button></p>
+    
+    <p id="question04">4. Are you comfortable with public speaking?</p>
+    <p> <button id="q4yes">Yes</button></p>
+    <p> <button id="q4no">No</button></p>
+    
+    <h2 id="answer01">Introvert<br>
+    
+        You are an Introvert, you are more reserved and reflective. You may take pleasure in activities like reading, writing, using computers, hiking, and fishing.</h2>
+    
+    <h2 id="answer02">Extravert<br>
+    
+        You are an Extravert, you are more enthusiastic and talkative. You may take pleasure in activities that involve large groups, like parties, community activities, public demonstrations and business or political groups. </h2>
+</body>  
+    
+    <script>
+    var myname= document.querySelector("#name");
+    var myinput= document.querySelector("#input");    
+    var button01= document.querySelector("#button01");
+    var intro= document.querySelector("#intro");    
+    var button02= document.querySelector("#button02");
+    var question01= document.querySelector("#question01");  
+    var answer01= document.querySelector("#answer01");
+    var q1yes= document.querySelector("#q1yes");
+    var answer02= document.querySelector("#answer02");
+    var q1no= document.querySelector("#q1no");
+    var question02= document.querySelector("#question02");  
+    var q2yes= document.querySelector("#q2yes");  
+    var q2no= document.querySelector("#q2no");
+    var question03= document.querySelector("#question03");   
+    var q3yes= document.querySelector("#q3yes"); 
+    var q3no= document.querySelector("#q3no");
+    var question04= document.querySelector("#question04");   
+    var q4yes= document.querySelector("#q4yes");
+    var q4no= document.querySelector("#q4no");
+        
+      myname.innerHTML="Hello! " + myinput.value;      
+    
+    button01.addEventListener("click", clickHandler01, false);
+        
+    function clickHandler01()
+    {
+       
+        button01.removeEventListener("click", clickHandler01, false);
+        
+         myname.innerHTML="Hello!" + myinput.value;    
+    }
+      
+            
+    button02.addEventListener("click",clickHandler02,false);
+        
+        function clickHandler02()
+        {
+            button02.removeEventListener("click", clickHandler02, false);
+            question01.style.display="block";
+            q1yes.style.display="block";
+            q1no.style.display="block";
+            button02.style.display="none";
+        }
+        
+        
+        
+        
+        
+        
+         question01.style.display="none";
+    q1yes.addEventListener("click",clickHandler03,false);
+        
+        function clickHandler03()
+        {
+            q1yes.removeEventListener("click", clickHandler03,false);
+            question02.style.display="block";
+            q2yes.style.display="block";
+            q2no.style.display="block";
+            //q1yes.style.display="none";
+        }
+        
+              
+    q1no.addEventListener("click",clickHandler04,false);
+        
+        function clickHandler04()
+        {
+            q1no.removeEventListener("click", clickHandler04,false);
+            question02.style.display="block";
+            q2yes.style.display="block";
+            q2no.style.display="block";
+            //q1no.style.display="none";
+        }        
+
+        
+        
+        
+        
+        
+       
+            question02.style.display="none";
+    q2yes.addEventListener("click",clickHandler05,false);
+        
+        function clickHandler05()
+        {
+            q2yes.removeEventListener("click", clickHandler05, false);
+            question03.style.display="block";
+            q3yes.style.display="block";
+            q3no.style.display="block";
+            //q2yes.style.display="none";
+        } 
+        
+            
+    q2no.addEventListener("click",clickHandler06,false);
+        
+        function clickHandler06()
+        {
+            q2no.removeEventListener("click",clickHandler06,false);
+            question03.style.display="block";
+            q3yes.style.display="block";
+            q3no.style.display="block";
+            //q2no.style.display="none";
+        } 
+        
+        
+        
+        
+        
+        
+        
+        
+        question03.style.display="none";
+    q3yes.addEventListener("click",clickHandler07,false);
+        
+        function clickHandler07()
+        {
+            q3yes.removeEventListener("click",clickHandler07,false);
+            question04.style.display="block";
+            q4yes.style.display="block";
+            q4no.style.display="block";
+            //q3yes.style.display="none";
+        } 
+        
+            
+    q3no.addEventListener("click",clickHandler08,false);
+        
+        function clickHandler08()
+        {
+            q3no.removeEventListener("click",clickHandler08,false);
+            question04.style.display="block";
+            q4yes.style.display="block";
+            q4no.style.display="block";
+            //q3no.style.display="none";
+        } 
+        
+        
+        
+        
+        
+        
+        
+        question04.style.display="none";
+    q4yes.addEventListener("click",clickHandler09,false);
+        
+        function clickHandler09()
+        {
+            q4yes.removeEventListener("click",clickHandler09,false);
+            answer02.style.display="block";
+            //q4yes.style.display="none";
+        } 
+        
+    
+        
+    q4no.addEventListener("click",clickHandler10,false);
+        
+        function clickHandler10()
+        {
+            q4no.removeEventListener("click", clickHandler10,false);
+            answer01.style.display="block";
+            //q4no.style.display="none";
+        } 
+        
+    answer01.style.display="none";
+    answer02.style.display="none";    
+    
+        
+        
+        
+        
+        
+        
+        
+    </script>
+    
+    
+</html>
